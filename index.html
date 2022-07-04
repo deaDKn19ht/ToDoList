@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    </script>
+    <title>ToDo</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Список задач</h2>
+        <input type="text" 
+        placeholder="Введите новую задачу"
+        v-model="newElem"
+        >
+        <button @click="addNewElems">Добавить</button>
+        <hr>
+        <ul>
+            <li v-for="(elem, i) in listElem" 
+            @click.ctrl="listElem.splice(i,1)" 
+            @dblclick="">{{elem}}</li>
+        </ul>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>
