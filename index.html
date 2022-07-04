@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +10,26 @@
     </script>
     <title>ToDo</title>
 </head>
+
 <body>
     <div id="app">
         <h2>Список задач</h2>
         <input type="text" 
-        placeholder="Введите новую задачу"
-        v-model="newElem"
-        >
+        placeholder="Введите новую задачу" 
+        v-model="newElem" 
+        @keyup.enter="addNewElems">
         <button @click="addNewElems">Добавить</button>
         <hr>
-        <ul>
-            <li v-for="(elem, i) in listElem" 
-            @click.ctrl="listElem.splice(i,1)" 
-            @dblclick="">{{elem}}</li>
-        </ul>
+        <ol>
+            <li v-for="(elem, i) in listElem">{{elem}}</li>
+        </ol>     
+        <h2 v-show="listElem.length == 0">Список пуск</h2>   
+        <hr>
+        <p>количество задач: {{listElem.length}}  
+            <button @click="listElem.splice(i)">Очистить</button>
+        </p>
     </div>
     <script src="code.js"></script>
 </body>
+
 </html>
