@@ -12,22 +12,27 @@
 </head>
 
 <body>
-    <div id="app">
-        <h2>Список задач</h2>
-        <input type="text" 
+    <div id="app" class="window">
+        <div class="card">
+        <h1>Список задач</h1>
+        <input type="text" class="card-input"
         placeholder="Введите новую задачу" 
         v-model="newElem" 
         @keyup.enter="addNewElems">
-        <button @click="addNewElems">Добавить</button>
+        <button @click="addNewElems" class="card-btn">Добавить</button>
         <hr>
-        <ol>
-            <li v-for="(elem, i) in listElem">{{elem}}</li>
+        <ol class="card-list">
+            <li v-for="(elem, i) in listElem" class="list-elem"
+            >{{elem}}</li>
+             <h2 v-show="listElem.length == 0">Список пуск</h2>  
         </ol>     
-        <h2 v-show="listElem.length == 0">Список пуск</h2>   
+        
         <hr>
         <p>количество задач: {{listElem.length}}  
-            <button @click="listElem.splice(i)">Очистить</button>
+            <button class="card-btn" 
+            @click="listElem.splice(i)">Очистить</button>
         </p>
+    </div>
     </div>
     <script src="code.js"></script>
 </body>
