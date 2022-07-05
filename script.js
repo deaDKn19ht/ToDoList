@@ -3,8 +3,7 @@ Vue.createApp({
         newElem: '',
         listNewElem: [],
         listElem: [],
-        isDone: true
-    }),
+        }),
     methods: {
         addNewElems() {
             if (this.newElem !== '') {
