@@ -12,26 +12,24 @@
 </head>
 
 <body>
-    <div id="app" class="card">        
+    <div id="app" class="card">
         <h1>Список задач</h1>
-       <div class="card__header"> <input type="text" class="card__input"
-        placeholder="Введите новую задачу" 
-        v-model="newElem" 
-        @keyup.enter="addNewElems"> <br>
-        <button @click="addNewElems" class="card__btn">Добавить</button>
-    </div>
+        <div class="card__header"> <input type="text" class="card__input" placeholder="Введите новую задачу"
+                v-model="newElem" @keyup.enter="addNewElems"> <br>
+            <button @click="addNewElems" class="card__btn">Добавить</button>
+        </div>
         <hr>
         <ul class="card__list">
-            <li class="list__elem" v-for="(elem, i) in listElem"><button class="list__btn" @click="listElem.splice(i,1)">&#10008;</button>   
+            <li class="list__elem" v-for="(elem, i) in listElem"><button class="list__btn"
+                    @click="listElem.splice(i,1)">&#10008;</button>
                 {{elem}}
-                </li>
-             <h2 v-show="listElem.length == 0">Список пуск</h2>  
-        </ul>     
+            </li>
+            <h2 v-show="listElem.length == 0">Список пуск</h2>
+        </ul>
         <hr>
-        <p class="card__footer">количество задач: {{listElem.length}}  
-            <button class="card__btn" 
-            @click="listElem.splice(i)">Очистить</button>
-        </p>    
+        <p class="card__footer">количество задач: {{listElem.length}}
+            <button class="card__btn" @click="listElem.splice(i)">Очистить</button>
+        </p>
     </div>
     <script src="script.js"></script>
 </body>

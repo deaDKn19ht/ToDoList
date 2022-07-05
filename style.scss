@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -13,8 +12,6 @@ body {
     justify-content: center;
 
 }
-
-
 
 .card {
     background-color: white;
@@ -34,26 +31,23 @@ body {
             margin-left: 0;
         }
     }
-    
 
-    .card__list {    
-        
+    .card__list {
+
         height: 100%;
         overflow-y: scroll;
         overflow-x: hidden;
-        
-        
-       
 
         .list__elem {
             list-style: none;
             border: 1px solid #36485E;
             margin-bottom: 3px;
         }
+
         .list__btn {
             width: 20px;
             height: 20px;
-            border-radius: 50%;  
+            border-radius: 50%;
             margin: 3px;
         }
     }
@@ -63,8 +57,7 @@ body {
         height: 32px;
         border-radius: 16px;
         padding-left: 10px;
-        
-        }
+    }
 
     .card__btn {
         margin: 5px;
@@ -74,9 +67,9 @@ body {
         background-color: #36485E;
         color: white;
         font-weight: bold;
-        
-    }   
+    }
+
     .card__footer {
-        margin-top: 5px;               
-        }
+        margin-top: 5px;
+    }
 }
